@@ -12,7 +12,17 @@ yarn
 pnpm install
 ```
 
-Second, run the project:
+
+Second, add `.env.local`:
+
+Make sure you have `.env.local` file in root directory with constans
+
+NEXT_PUBLIC_SUB_DOMAIN = pczebmvrovjkvzfofmvz
+
+NEXT_PUBLIC_REGION = eu-central-1
+
+
+Third, run the project:
 
 ```bash
 npm run dev
@@ -22,10 +32,7 @@ yarn dev
 pnpm dev
 ```
 
-Make sure you have `.env.local` file in root directory with constans
 
-NEXT_PUBLIC_SUB_DOMAIN = pczebmvrovjkvzfofmvz
-NEXT_PUBLIC_REGION = eu-central-1
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

@@ -11,7 +11,6 @@ import {
 	useUserData,
 } from '@nhost/nextjs';
 import { Layout, Space } from 'antd';
-import { Inter } from 'next/font/google';
 
 import Navigation from './components/Navigation';
 import nhost from './nhost';
@@ -21,8 +20,6 @@ import styles from './layout.module.scss';
 import './globals.css';
 
 const { Header, Footer, Sider, Content } = Layout;
-
-const inter = Inter({ subsets: ['latin'] });
 
 const metadata = {
 	title: 'Quiz game',

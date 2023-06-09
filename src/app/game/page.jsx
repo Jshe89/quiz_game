@@ -19,6 +19,7 @@ const Game = () => {
 	const { loading, error, data } = useQuery(GET_QUESTIONS);
 
 	const [currentStep, setCurrentStep] = useState(0);
+	const [isLoading, setIsLoading] = useState(false);
 	const [solutions, setSolutions] = useState([]);
 	const [result, setResult] = useState(null);
 	const [isRequestError, setIsRequestError] = useState(false);
@@ -44,6 +45,8 @@ const Game = () => {
 
 	const submitAnswers = async () => {
 		try {
+			setIsLoading(true);
+
 			const {
 				res: { data },
 			} = await nhost.functions.call('evaluate', {
@@ -57,10 +60,13 @@ const Game = () => {
 					[usersInfo.email]: data,
 				},
 			});
+
 			addDataToLocalStorage(usersInfo.email, data);
 			router.push('/rating');
 		} catch (err) {
 			setIsRequestError(true);
+		} finally {
+			setIsLoading(false);
 		}
 	};
 
@@ -97,7 +103,12 @@ const Game = () => {
 								</Button>
 							)}
 							{currentStep === questions.length - 1 && (
-								<Button type="primary" htmlType="submit" disabled={questions.length !== solutions.length}>
+								<Button
+									type="primary"
+									htmlType="submit"
+									loading={isLoading}
+									disabled={questions.length !== solutions.length}
+								>
 									Done
 								</Button>
 							)}

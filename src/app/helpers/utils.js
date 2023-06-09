@@ -1,10 +1,12 @@
 export const LocalStorage = {
 	set(key, value) {
-		localStorage.setItem(key, JSON.stringify(value));
+		if (typeof window !== 'undefined') {
+			localStorage.setItem(key, JSON.stringify(value));
+		}
 	},
 
 	get(key) {
-		const value = localStorage.getItem(key);
+		const value = typeof window !== 'undefined' ? localStorage.getItem(key) : null;
 		try {
 			return JSON.parse(value);
 		} catch (e) {

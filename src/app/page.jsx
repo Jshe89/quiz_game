@@ -12,15 +12,15 @@ const Welcome = () => {
 	const router = useRouter();
 	const [form] = Form.useForm();
 
-	const onFinish = values => {
+	const onSubmit = values => {
+		router.push('/game');
 		addDataToLocalStorage(values.email);
 		setUsersInfo({ ...usersInfo, email: values.email });
-		router.push('/game');
 	};
 
 	return (
 		<div>
-			<Form form={form} onFinish={onFinish}>
+			<Form form={form} onFinish={onSubmit}>
 				Welcome to quiz game
 				<p>Please enter your e-mail address</p>
 				<Form.Item
