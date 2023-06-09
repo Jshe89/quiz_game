@@ -1,0 +1,11 @@
+.navigation {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  a {
+    color:#fff;
+    &:hover {
+      color: #808080;
+    }
+  }
+}

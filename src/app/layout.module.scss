@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  color: #fff !important;
+  height: 64px;
+  padding-inline: 50px;
+  line-height: 64px;
+  background: linear-gradient(90deg, rgb(64, 4, 215) 0%, rgb(89, 4, 164) 100%) !important;
+}
+
+.main {
+  height: calc(100vh - 130px);
+  color: #000;
+  background-color: #fcf7ed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer  {
+  text-align: center;
+  color: #fff !important;
+  background: linear-gradient(90deg, rgba(62,4,213,1) 0%, rgba(91,4,166,1) 100%) !important;
+}

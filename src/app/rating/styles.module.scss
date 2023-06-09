@@ -1,0 +1,14 @@
+.rating {
+  padding: 10px 0;
+}
+
+.email {
+  margin-right: 10px;
+  &.bold {
+    font-weight: bold;
+  }
+}
+
+.score {
+  margin-left: 10px;
+}
