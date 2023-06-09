@@ -30,3 +30,13 @@ NEXT_PUBLIC_REGION = eu-central-1
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
+## Improvements
+
+- simple auth with google for example
+- use typescript
+- use styled components
+- make category for the game
+- make friendly design
+
+
+
