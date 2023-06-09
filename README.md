@@ -44,6 +44,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - use styled components
 - make category for the game
 - make friendly design
+- add unit tests
 
 
 
