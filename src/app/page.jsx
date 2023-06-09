@@ -1,7 +1,7 @@
 'use client';
-import React, { useContext } from 'react';
+import React from 'react';
 import { useRouter } from 'next/navigation';
-import { InfoCircleOutlined, UserOutlined } from '@ant-design/icons';
+import { UserOutlined } from '@ant-design/icons';
 import { Input, Form, Button } from 'antd';
 
 import { useUserCtx } from './layout';

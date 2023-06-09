@@ -1,16 +1,8 @@
 'use client';
 import React, { createContext, useContext, useState } from 'react';
-import { NextPageContext } from 'next';
 import { NhostApolloProvider } from '@nhost/react-apollo';
-import {
-	NhostProvider,
-	getNhostSession,
-	NhostSession,
-	useAccessToken,
-	useAuthenticated,
-	useUserData,
-} from '@nhost/nextjs';
-import { Layout, Space } from 'antd';
+import { NhostProvider } from '@nhost/nextjs';
+import { Layout } from 'antd';
 
 import Navigation from './components/Navigation';
 import nhost from './nhost';
@@ -19,11 +11,7 @@ import { LocalStorage } from './helpers';
 import styles from './layout.module.scss';
 import './globals.css';
 
-const { Header, Footer, Sider, Content } = Layout;
-
-const metadata = {
-	title: 'Quiz game',
-};
+const { Header, Footer, Content } = Layout;
 
 const UserCtx = createContext({
 	usersInfo: null,

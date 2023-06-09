@@ -1,8 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
-import { useQuery, gql } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { Button, Form, Radio, Space } from 'antd';
 
 import Loading from '../components/Loading';
