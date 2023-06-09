@@ -8,6 +8,8 @@ First, install node modules:
 npm install
 # or
 yarn
+# or
+pnpm install
 ```
 
 Second, run the project:
