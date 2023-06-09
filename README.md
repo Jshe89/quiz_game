@@ -15,11 +15,11 @@ pnpm install
 Second, run the project:
 
 ```bash
-npm run start
+npm run dev
 # or
-yarn start
+yarn dev
 # or
-pnpm start
+pnpm dev
 ```
 
 Make sure you have `.env.local` file in root directory with constans
